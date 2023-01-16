@@ -3,9 +3,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Nicholi Jin\'s Blogs',
+  title: 'Nicholi Blogs',
   tagline: 'Nicholi Jin is a senior software engineer',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://blog.nicholijin.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -27,7 +27,10 @@ const config = {
           // sidebarPath: require.resolve('./sidebars.js'),
         },
         blog: {
+          routeBasePath: "blog",
           showReadingTime: true,
+          blogSidebarTitle: 'Nicholi Blogs',
+          blogSidebarCount: 0,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -40,7 +43,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Nicholi Jin\'s Blogs',
+        title: 'Nicholi Blogs',
         logo: {
           alt: 'Nicholi Jin Logo',
           src: 'img/logo.svg',
@@ -119,6 +122,17 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+
+  plugins: [
+      [
+        "./plugins/blog-plugin",
+        {
+          id: "blog",
+          routeBasePath: "blog",
+          path: "./blog",
+        },
+      ]
+  ]
 };
 
 module.exports = config;
