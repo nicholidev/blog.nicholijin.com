@@ -27,7 +27,10 @@ const config = {
           // sidebarPath: require.resolve('./sidebars.js'),
         },
         blog: {
+          routeBasePath: "blog",
           showReadingTime: true,
+          blogSidebarTitle: 'Nicholi Blogs',
+          blogSidebarCount: 0,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -119,6 +122,17 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+
+  plugins: [
+      [
+        "./plugins/blog-plugin",
+        {
+          id: "blog",
+          routeBasePath: "blog",
+          path: "./blog",
+        },
+      ]
+  ]
 };
 
 module.exports = config;

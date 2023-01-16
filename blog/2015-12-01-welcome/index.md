@@ -3,6 +3,7 @@ slug: welcome
 title: Welcome
 authors: [nicholi]
 tags: [welcome, hello, nicholi, web, mobile]
+sidebar_position: 1
 ---
 
 ## Who I am
