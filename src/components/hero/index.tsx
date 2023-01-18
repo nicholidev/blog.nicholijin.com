@@ -8,7 +8,7 @@ import Button from '../style/button';
 const Hero: FC = () => {
     return (
         <HeroWrap>
-            <h1>Hello World!</h1>
+            <h1> Hello World! </h1>
             <ReactTypingEffect
                 text={["Welcome to my blog!"]}
                 cursorRenderer={cursor => <h2>{cursor}</h2>}
@@ -37,7 +37,7 @@ const Hero: FC = () => {
                 }}
                 to="/blog"
             >
-                Read Now
+                Read 👇 Now
             </Button>
 
             <ThemedImage
