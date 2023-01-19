@@ -1,5 +1,5 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/oceanicNext');
+const darkCodeTheme = require('prism-react-renderer/themes/oceanicNext');
 
 
 const config = {
@@ -15,7 +15,7 @@ const config = {
 
     i18n: {
         defaultLocale: 'en',
-        locales: ['en'],
+        locales: ['en', "fr"],
     },
 
     presets: [
@@ -57,7 +57,7 @@ const config = {
                     },
                     {
                         href: 'https://nicholijin.com',
-                        label: 'Personal',
+                        label: 'NJ',
                         position: 'right',
                     },
                     {
@@ -65,6 +65,10 @@ const config = {
                         label: 'GitHub',
                         position: 'right',
                     },
+                    {
+                        type: "localeDropdown",
+                        position: 'right',
+                    }
                 ],
             },
             footer: {
