@@ -12,25 +12,21 @@ const config = {
     favicon: 'img/favicon.ico',
     organizationName: 'facebook',
     projectName: 'docusaurus',
-
+    markdown: {
+        mermaid: true,
+    },
     i18n: {
         defaultLocale: 'en',
         locales: ['en', "fr"],
     },
-
     presets: [
         [
             'classic',
             ({
                 docs: {
-                    sidebarPath: require.resolve('./sidebars.js'),
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
                 blog: {
-                    showReadingTime: true,
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                    showReadingTime: false,
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
@@ -38,9 +34,7 @@ const config = {
             }),
         ],
     ],
-
-    themeConfig:
-        ({
+    themeConfig: ({
             navbar: {
                 title: 'Nicholi Blogs',
                 logo: {
@@ -72,47 +66,35 @@ const config = {
                 ],
             },
             footer: {
-                links: [
-                    {
-                        title: 'Docs',
-                        items: [
-                            {
-                                label: 'Tutorial',
-                                to: '/docs/intro',
-                            },
-                        ],
-                    },
-                    {
-                        title: 'Community',
-                        items: [
-                            {
-                                label: 'Stack Overflow',
-                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                            },
-                            {
-                                label: 'Discord',
-                                href: 'https://discordapp.com/invite/docusaurus',
-                            },
-                            {
-                                label: 'Twitter',
-                                href: 'https://twitter.com/docusaurus',
-                            },
-                        ],
-                    },
-                    {
-                        title: 'More',
-                        items: [
-                            {
-                                label: 'Blog',
-                                to: '/blog',
-                            },
-                            {
-                                label: 'GitHub',
-                                href: 'https://github.com/facebook/docusaurus',
-                            },
-                        ],
-                    },
-                ],
+                // links: [
+                //     {
+                //         title: 'Docs',
+                //         items: [
+                //             {
+                //                 label: 'Tutorial',
+                //                 to: '/docs/intro',
+                //             },
+                //         ],
+                //     },
+                //     {
+                //         title: 'Community',
+                //         items: [
+                //             {
+                //                 label: 'Stack Overflow',
+                //                 href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                //             },
+                //         ],
+                //     },
+                //     {
+                //         title: 'More',
+                //         items: [
+                //             {
+                //                 label: 'Blog',
+                //                 to: '/blog',
+                //             },
+                //         ],
+                //     },
+                // ],
                 copyright: `Copyright © ${new Date().getFullYear()} Nicholi Jin.`,
             },
             prism: {
@@ -120,6 +102,7 @@ const config = {
                 darkTheme: darkCodeTheme,
             },
         }),
+    themes: ['@docusaurus/theme-live-codeblock', '@docusaurus/theme-mermaid'],
 };
 
 module.exports = config;
