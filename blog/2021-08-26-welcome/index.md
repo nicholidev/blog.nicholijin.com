@@ -1,21 +1,25 @@
 ---
 slug: welcome
 title: Welcome
-authors: [nicholi]
-tags: [welcome, hello, nicholi, web, mobile]
+authors: [slorber, yangshun]
+tags: [facebook, hello, docusaurus]
 ---
 
-## Who I am
+[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
 
-I ([Nicholi Jin](https://nicholijin.com)) am a senior web engineer who has over 8 years of experience in web and mobile application development.
+Simply add Markdown files (or folders) to the `blog` directory.
 
-<!--truncate-->
+Regular blog authors can be added to `authors.yml`.
 
-## What about my skills
+The blog post date can be extracted from filenames, such as:
 
+- `2019-05-30-welcome.md`
+- `2019-05-30-welcome/index.md`
 
-asdfasdfasdf
+A blog post folder can be convenient to co-locate blog post images:
 
-asdfasdf
+![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)
 
+The blog supports tags as well!
 
+**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config.

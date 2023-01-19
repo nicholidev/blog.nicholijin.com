@@ -1,124 +1,125 @@
-const lightCodeTheme = require('prism-react-renderer/themes/dracula');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/oceanicNext');
+const darkCodeTheme = require('prism-react-renderer/themes/oceanicNext');
 
-/** @type {import('@docusaurus/types').Config} */
+
 const config = {
-  title: 'Nicholi Jin\'s Blogs',
-  tagline: 'Nicholi Jin is a senior software engineer',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+    title: 'Nicholi Blogs',
+    tagline: 'Nicholi Jin is a senior software engineer',
+    url: 'https://blog.nicholijin.com',
+    baseUrl: '/',
+    onBrokenLinks: 'throw',
+    onBrokenMarkdownLinks: 'warn',
+    favicon: 'img/favicon.ico',
+    organizationName: 'facebook',
+    projectName: 'docusaurus',
 
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+    i18n: {
+        defaultLocale: 'en',
+        locales: ['en', "fr"],
+    },
 
-  presets: [
-    [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          // sidebarPath: require.resolve('./sidebars.js'),
-        },
-        blog: {
-          showReadingTime: true,
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      }),
+    presets: [
+        [
+            'classic',
+            ({
+                docs: {
+                    sidebarPath: require.resolve('./sidebars.js'),
+                    editUrl:
+                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                },
+                blog: {
+                    showReadingTime: true,
+                    editUrl:
+                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                },
+                theme: {
+                    customCss: require.resolve('./src/css/custom.css'),
+                },
+            }),
+        ],
     ],
-  ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        title: 'Nicholi Jin\'s Blogs',
-        logo: {
-          alt: 'Nicholi Jin Logo',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-            to: '/blog',
-            label: 'Blogs',
-            position: 'left'
-          },
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorials',
-          },
-          {
-            href: 'https://nicholijin.com/',
-            label: 'Website',
-            position: 'right',
-          },
-          {
-            href: 'https://github.com/nicholidev',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        links: [
-          {
-            title: 'About',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Featured',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Nicholi Jin's Blog. Built by Nicholi Jin.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
+    themeConfig:
+        ({
+            navbar: {
+                title: 'Nicholi Blogs',
+                logo: {
+                    alt: 'Nicholi Blogs Logo',
+                    src: 'img/logo.svg',
+                },
+                items: [
+                    {to: '/blog', label: 'Blog', position: 'left'},
+                    {
+                        type: 'doc',
+                        docId: 'intro',
+                        position: 'left',
+                        label: 'Tutorial',
+                    },
+                    {
+                        href: 'https://nicholijin.com',
+                        label: 'NJ',
+                        position: 'right',
+                    },
+                    {
+                        href: 'https://github.com/nicholidev',
+                        label: 'GitHub',
+                        position: 'right',
+                    },
+                    {
+                        type: "localeDropdown",
+                        position: 'right',
+                    }
+                ],
+            },
+            footer: {
+                links: [
+                    {
+                        title: 'Docs',
+                        items: [
+                            {
+                                label: 'Tutorial',
+                                to: '/docs/intro',
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Community',
+                        items: [
+                            {
+                                label: 'Stack Overflow',
+                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                            },
+                            {
+                                label: 'Discord',
+                                href: 'https://discordapp.com/invite/docusaurus',
+                            },
+                            {
+                                label: 'Twitter',
+                                href: 'https://twitter.com/docusaurus',
+                            },
+                        ],
+                    },
+                    {
+                        title: 'More',
+                        items: [
+                            {
+                                label: 'Blog',
+                                to: '/blog',
+                            },
+                            {
+                                label: 'GitHub',
+                                href: 'https://github.com/facebook/docusaurus',
+                            },
+                        ],
+                    },
+                ],
+                copyright: `Copyright © ${new Date().getFullYear()} Nicholi Jin.`,
+            },
+            prism: {
+                theme: lightCodeTheme,
+                darkTheme: darkCodeTheme,
+            },
+        }),
 };
 
 module.exports = config;
